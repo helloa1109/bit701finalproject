@@ -55,12 +55,12 @@ processResources {
 }
 
 
-task copyReactFile(type: Copy) {
-    dependsOn "buildReact"
-    from "$reactAppDir/build"
-    //into "$buildDir/resources/main/static"
-    into "$projectDir/src/main/resources/static/"
-}
+//task copyReactFile(type: Copy) {
+//    dependsOn "buildReact"
+//    from "$reactAppDir/build"
+//    //into "$buildDir/resources/main/static"
+//    into "$projectDir/src/main/resources/static/"
+//}
 
 //task buildReact(type: Exec) {
 //    dependsOn "installReact"
