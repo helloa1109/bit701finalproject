@@ -14,12 +14,6 @@ html{
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 1s linear;
-    animation:
-    translate-x 5000ms infinite alternate ease-in-out,
-    scale 7200ms infinite alternate ease-in-out,
-    translate-x 5000ms infinite alternate ease-in-out,
-    translate-y 2100ms infinite alternate ease-in-out,
-    rotate 6500ms infinite linear;
   }
 }
 
