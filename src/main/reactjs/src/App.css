@@ -1,15 +1,25 @@
+html{
+  background-color: black;
+  animation: back infinite 3s steps(9999);
+}
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 1s linear;
+    animation:
+    translate-x 5000ms infinite alternate ease-in-out,
+    scale 7200ms infinite alternate ease-in-out,
+    translate-x 5000ms infinite alternate ease-in-out,
+    translate-y 2100ms infinite alternate ease-in-out,
+    rotate 6500ms infinite linear;
   }
 }
 
@@ -30,11 +40,61 @@
 
 @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg);
+    transform: translate(120px, 50px);
   }
   to {
-    transform: rotate(360deg);
+    transform: translate(20px, 500px);
   }
+}
+
+@keyframes scale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.4);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(3turn);
+  }
+}
+@keyframes translate-x {
+  from {
+    transform: translateX(-25vmin);
+  }
+  to {
+    transform: translateX(25vmin);
+  }
+}
+@keyframes translate-y {
+  from {
+    transform: translateY(-30vmin);
+  }
+  to {
+    transform: translateY(15vmin);
+  }
+}
+
+@keyframes scale {
+  from {
+    scale: 0.2;
+    color: blue;
+    background: -webkit-linear-gradient(to left, #f64f59, #c471ed, #12c2e9);
+  }
+  to {
+    scale: 1;
+    color: violet;
+    background: linear-gradient(to left, #f64f59, #c471ed, #12c2e9);
+  }
+}
+
+.App-text{
+  animation: scale infinite 1s;
 }
 
 animation {
@@ -48,4 +108,42 @@ animation {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+@keyframes back{
+  0%{
+    background-color: #f64f59;
+  }
+  10%{
+    background-color: yellow;
+  }
+  20%{
+    background-color: green;
+  }
+  30%{
+    background-color: blue;
+  }
+  40%{
+    background-color: purple;
+  }
+  50%{
+  
+    background-color: #12c2e9;
+  }
+  60%{
+    background-color:wheat;
+  }
+  70%{
+    background-color:brown;
+  }
+  80%{
+    background-color:darkgoldenrod;
+  }
+  90%{
+    background-color: #c471ed;
+  
+  }
+  100%{
+    background-color: black;
+  }
 }
