@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import homin from './homin.gif';
 import homin1 from './hominpee.gif';
