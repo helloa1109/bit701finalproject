@@ -1,8 +1,11 @@
 import React from 'react';
 import "../App.css";
+
 function Home(props) {
     return (
-        <div>홈그라운드</div>
+        <div>
+            <h1>홈그라운드</h1>
+        </div>
     );
 }
 
