@@ -1,7 +1,7 @@
-html{
-  background-color: black;
-  animation: back infinite 3s steps(9999);
-}
+/*html{*/
+/*  background-color: black;*/
+/*  animation: back infinite 5s linear;*/
+/*}*/
 
 .App {
   text-align: center;
@@ -140,4 +140,39 @@ animation {
   100%{
     background-color: black;
   }
+}
+
+ul.menu li{
+  float: left;
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 16px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+ul.menu li a{
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+ul.menu li:hover{
+  background-color: darkcyan;
+  box-shadow: 5px 5px 5px gray;
+
+}
+
+ul.menu li a:hover{
+  color: aliceblue;
+}
+
+div.login{
+  margin:100px 100px;
+  border: 5px solid gray;
+  width:320px;
+  border-radius: 10px;
 }
