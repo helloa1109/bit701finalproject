@@ -18,6 +18,7 @@ public class MemberController {
     @PostMapping("/insert")
     public void insert(@RequestBody MemberDto dto)
     {
+        System.out.println("insert>>"+dto);
         memberService.insertMember(dto);
     }
 
