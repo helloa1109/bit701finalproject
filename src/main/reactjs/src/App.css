@@ -2,6 +2,12 @@
 /*  background-color: black;*/
 /*  animation: back infinite 5s linear;*/
 /*}*/
+@font-face {
+  font-family: 'ChosunBg';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunBg.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 @media (prefers-reduced-motion: no-preference) {
@@ -116,4 +122,18 @@ div.login{
   border: 5px solid gray;
   width:320px;
   border-radius: 10px;
+}
+
+.addr_btn{
+  margin-top: 50px;
+  width: 250px;
+  height: 60px;
+  line-height: 50px;
+  margin-left: 35px;
+  border-radius: 10px;
+  border: none;
+  background-color: #e685b5;
+  color: white;
+  font-size: 25px;
+  font-family: 'ChosunBg';
 }
