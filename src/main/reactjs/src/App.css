@@ -9,6 +9,10 @@
   font-style: normal;
 }
 
+html *{
+  font-family: 'ChosunBg';
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -160,3 +164,18 @@ div.login{
   margin-left: 50px;
   margin-top: 50px;
 }
+
+@keyframes blinking {
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.2); }
+  60% {transform: scale(1.5);}
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.blinking-text {
+  animation: blinking 1s infinite;
+  color: #F7E600;
+  font-weight: bold;
+  font-size: 20px;
+}
+

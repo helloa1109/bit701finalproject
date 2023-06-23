@@ -5,7 +5,9 @@ import data.service.MemberService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @CrossOrigin
@@ -47,8 +49,17 @@ public class MemberController {
     }
 
     @GetMapping("/login")
-    public int login(String myid,String mypass)
+    public Map<String, String> login(String myid, String mypass)
     {
-        return memberService.getLogin(myid,mypass);
+        int n = memberService.getLogin(myid,mypass);
+        //성공 시 가입한 이름도 같이 보낸다
+        String myname="";
+        if(n==1){
+            myname=memberService.getName(myid);
+        }
+        Map<String, String> map = new HashMap<>();
+        map.put("success",n==1?"yes":"no");
+        map.put("myname",myname);
+        return map;
     }
 }

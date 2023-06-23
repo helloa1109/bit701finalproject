@@ -14,7 +14,7 @@
     </select>
 
     <select id="getLogin" parameterType="Map" resultType="int">
-        select count(*) from member wehre myid=#{myid} and mypass=#{mypass}
+        select count(*) from member where myid=#{myid} and mypass=#{mypass}
     </select>
 
     <select id="getName" parameterType="String" resultType="String">
