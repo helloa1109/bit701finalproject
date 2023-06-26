@@ -9,29 +9,33 @@ function LoginForm(props) {
     const navi = useNavigate();
 
     //submin 이벤트
-    const onSubmitLogin=(e)=>{
+    const onSubmitLogin = (e) => {
         e.preventDefault();
-        const url=`/member/login?myid=${myid}&mypass=${mypass}`;
-        Axios.get(url)
-            .then(res=>{
-                if(res.data.success==='yes'){
-                    /*
-                    localStorage : 직접 지우기 전에는 브라우저에 남아있음
-                    sessionStorage : 브라우저 닫으면 지워짐
-                     */
-                    sessionStorage.loginok="yes";
-                    sessionStorage.myname=res.data.myname;
-                    sessionStorage.myid=myid;
+        const url = '/member/login';
+        const data = {
+            myid: myid,
+            mypass: mypass,
+        };
+
+        Axios.post(url, data)
+            .then((res) => {
+                if (res.data.success === 'yes') {
+                    // 로그인 성공 시 처리
+                    sessionStorage.loginok = 'yes';
+                    sessionStorage.myname = res.data.myname;
+                    sessionStorage.myid = myid;
                     window.location.reload();
-                    navi("/")
-                }else{
-                    alert("아이디나 비밀번호가 맞지 않습니다");
-                    sessionStorage.loginok="no";
-                    sessionStorage.myname="";
-                    sessionStorage.myid="";
+                    navi('/');
+                } else {
+                    // 로그인 실패 시 처리
+                    alert('아이디나 비밀번호가 맞지 않습니다');
+                    sessionStorage.loginok = 'no';
+                    sessionStorage.myname = '';
+                    sessionStorage.myid = '';
                 }
-            })
-    }
+            });
+    };
+
     return (
         <div className={'table_form'}>
             <form onSubmit={onSubmitLogin}>

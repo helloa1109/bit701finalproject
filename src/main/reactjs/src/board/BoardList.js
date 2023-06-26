@@ -1,9 +1,12 @@
 import React from 'react';
 import "../App.css";
-import {useNavigate} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 function BoardList(props) {
 
     const navi=useNavigate();
+
+    const {currentPage}=useParams();
+    console.log({currentPage});
 
     const onWriteButtonEvent=()=>{
         if(sessionStorage.loginok==null){

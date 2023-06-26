@@ -20,6 +20,11 @@ function BoardForm(props) {
 
     const onSubmitEvent=(e)=>{
         e.preventDefault();
+        Axios.post("/board/insert",{myid,myname,subject,content})
+            .then(res=>{
+                //목록으로 이동
+                navi("/board/list/1")
+            })
     }
 
     // 파일 업로드
