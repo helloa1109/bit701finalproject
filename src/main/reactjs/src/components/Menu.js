@@ -23,7 +23,7 @@ function Menu(props) {
                         <NavLink to={"/login"}>로그인</NavLink>
                     </li>:
                     <div>
-                        <li style={{width:'250px',backgroundColor:'#f64f59',color:'white',cursor:'pointer'}}
+                        <li style={{width:'250px',backgroundColor:'#f64f59',color:'green',cursor:'pointer'}}
                             onClick={()=>{
                                 sessionStorage.removeItem("loginok");
                                 sessionStorage.removeItem("myid");
